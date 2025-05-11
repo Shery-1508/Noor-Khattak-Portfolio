@@ -1,19 +1,17 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
 interface SEOHeadProps {
   title: string;
   description: string;
   canonicalUrl?: string;
   keywords?: string;
-  ogImage?: string;
 }
 
 const SEOHead = ({ 
   title, 
   description, 
   canonicalUrl = window.location.href, 
-  keywords = "lawyer, advocate, Karachi, Sindh, Pakistan, corporate law, banking regulations, High Court, legal services, commercial litigation, legal counsel",
-  ogImage = "/images/og-image.jpg" 
+  keywords = "lawyer, advocate, Karachi, Sindh, Pakistan, corporate law, banking regulations, High Court, legal services, commercial litigation, legal counsel"
 }: SEOHeadProps) => {
   
   const siteTitle = "Adv. Noor Z. Khattak | Senior Legal Counsel in Karachi";

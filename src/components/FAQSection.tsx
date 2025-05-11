@@ -283,13 +283,15 @@ const FAQSection = () => {
           <a 
             href="/contact" 
             className="inline-flex items-center group px-6 py-3 bg-primary-800 text-white rounded-md hover:bg-primary-700 transition-colors"
+            aria-label="Contact Adv. Noor Khattak to ask your legal question"
           >
-            <span>Ask Your Own Question</span>
+            <span>Contact Adv. Khattak for Legal Consultation</span>
             <svg 
               className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-200" 
               fill="none" 
               stroke="currentColor" 
               viewBox="0 0 24 24"
+              aria-hidden="true"
             >
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>

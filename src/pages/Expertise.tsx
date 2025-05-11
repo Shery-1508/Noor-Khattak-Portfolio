@@ -292,42 +292,54 @@ const Expertise = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
             <div className="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
               <div className="bg-primary/10 text-primary p-4 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
-                <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
                 </svg>
               </div>
               <h3 className="font-bold text-lg mb-2">Banking & Finance</h3>
               <p className="text-gray-600">Regulatory compliance and transaction structuring</p>
+              <a href="/expertise#banking" className="mt-4 inline-block text-primary-700 hover:text-primary-500 font-medium" aria-label="Learn more about Banking & Finance services">
+                Banking & Finance expertise details
+              </a>
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
               <div className="bg-primary/10 text-primary p-4 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
-                <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                 </svg>
               </div>
               <h3 className="font-bold text-lg mb-2">Real Estate</h3>
               <p className="text-gray-600">Property transactions and development projects</p>
+              <a href="/expertise#real-estate" className="mt-4 inline-block text-primary-700 hover:text-primary-500 font-medium" aria-label="Learn more about Real Estate services">
+                Real Estate expertise details
+              </a>
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
               <div className="bg-primary/10 text-primary p-4 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
-                <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
               <h3 className="font-bold text-lg mb-2">Technology</h3>
               <p className="text-gray-600">IP protection and regulatory compliance</p>
+              <a href="/expertise#technology" className="mt-4 inline-block text-primary-700 hover:text-primary-500 font-medium" aria-label="Learn more about Technology services">
+                Technology expertise details
+              </a>
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
               <div className="bg-primary/10 text-primary p-4 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
-                <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z" />
                 </svg>
               </div>
               <h3 className="font-bold text-lg mb-2">Shipping & Maritime</h3>
               <p className="text-gray-600">Contract negotiation and dispute resolution</p>
+              <a href="/expertise#shipping" className="mt-4 inline-block text-primary-700 hover:text-primary-500 font-medium" aria-label="Learn more about Shipping & Maritime services">
+                Shipping & Maritime expertise details
+              </a>
             </div>
           </div>
         </div>

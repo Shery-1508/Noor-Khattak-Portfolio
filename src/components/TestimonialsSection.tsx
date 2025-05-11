@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 type Testimonial = {
   quote: string;
@@ -70,6 +70,16 @@ const TestimonialsSection = () => {
 
   const [activeIndex, setActiveIndex] = useState(0);
 
+  useEffect(() => {
+    // Set up the ARIA relationships when component mounts
+    testimonials.forEach((_, index) => {
+      const contentElement = document.getElementById(`testimonial-content-${index}`);
+      if (contentElement) {
+        contentElement.setAttribute('aria-hidden', index === activeIndex ? 'false' : 'true');
+      }
+    });
+  }, [activeIndex, testimonials]);
+
   const nextTestimonial = () => {
     setActiveIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
   };
@@ -92,11 +102,16 @@ const TestimonialsSection = () => {
 
         <div className="max-w-4xl mx-auto">
           <div className="relative bg-primary-dark bg-opacity-20 p-8 md:p-12 rounded-lg">
-            <svg className="w-12 h-12 text-accent opacity-30 absolute top-6 left-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <svg className="w-12 h-12 text-accent opacity-30 absolute top-6 left-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-hidden="true">
               <path d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z" />
             </svg>
 
-            <div className="relative z-10">
+            <div 
+              className="relative z-10"
+              id={`testimonial-content-${activeIndex}`}
+              role="tabpanel"
+              aria-labelledby={`testimonial-tab-${activeIndex}`}
+            >
               <p className="text-xl md:text-2xl mb-8 italic">"{currentTestimonial.quote}"</p>
               <div className="flex items-center">
                 <div>
@@ -110,34 +125,39 @@ const TestimonialsSection = () => {
           <div className="flex justify-center mt-8 space-x-4">
             <button 
               onClick={prevTestimonial} 
-              className="bg-white bg-opacity-20 p-2 rounded-full hover:bg-opacity-30 transition"
+              className="bg-white bg-opacity-20 p-2 rounded-full hover:bg-opacity-30 transition min-w-[44px] min-h-[44px] flex items-center justify-center"
               aria-label="Previous testimonial"
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
             </button>
             
-            <div className="flex space-x-2" role="tablist" aria-label="Testimonials Navigation">
+            <div className="flex space-x-4" role="tablist" aria-label="Testimonials Navigation">
               {testimonials.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setActiveIndex(index)}
-                  className={`w-3 h-3 rounded-full ${index === activeIndex ? 'bg-white' : 'bg-white bg-opacity-30'}`}
+                  className={`w-10 h-10 min-w-[44px] min-h-[44px] rounded-full flex items-center justify-center ${index === activeIndex ? 'bg-white' : 'bg-white bg-opacity-30'}`}
                   aria-label={`Go to testimonial ${index + 1}`}
                   aria-selected={index === activeIndex}
                   role="tab"
+                  id={`testimonial-tab-${index}`}
                   aria-controls={`testimonial-content-${index}`}
-                ></button>
+                  tabIndex={index === activeIndex ? 0 : -1}
+                >
+                  <span className="sr-only">Testimonial {index + 1}</span>
+                  <div className={`w-3 h-3 rounded-full ${index === activeIndex ? 'bg-primary' : 'bg-white/70'}`}></div>
+                </button>
               ))}
             </div>
             
             <button 
               onClick={nextTestimonial} 
-              className="bg-white bg-opacity-20 p-2 rounded-full hover:bg-opacity-30 transition"
+              className="bg-white bg-opacity-20 p-2 rounded-full hover:bg-opacity-30 transition min-w-[44px] min-h-[44px] flex items-center justify-center"
               aria-label="Next testimonial"
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </button>
@@ -157,7 +177,7 @@ const TestimonialsSection = () => {
                 >
                   <img 
                     src={company.logo} 
-                    alt={company.name} 
+                    alt={`${company.name} logo`} 
                     className="max-w-full max-h-full object-contain"
                   />
                 </div>

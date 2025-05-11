@@ -5,7 +5,6 @@ type Testimonial = {
   name: string;
   title: string;
   company: string;
-  logo?: string;
 };
 
 type CompanyLogo = {
@@ -19,8 +18,7 @@ const TestimonialsSection = () => {
       quote: "Advocate Noor Khattak's strategic approach to our complex banking litigation saved us millions and helped us implement a robust compliance framework.",
       name: "Muhammad Ali",
       title: "CEO",
-      company: "Allied Bank Limited",
-      logo: "/logos/allied-bank.png"
+      company: "Allied Bank Limited"
     },
     {
       quote: "His expertise in corporate governance transformed our legal framework, significantly reducing our exposure to regulatory penalties.",
@@ -101,15 +99,6 @@ const TestimonialsSection = () => {
             <div className="relative z-10">
               <p className="text-xl md:text-2xl mb-8 italic">"{currentTestimonial.quote}"</p>
               <div className="flex items-center">
-                {currentTestimonial.logo && (
-                  <div className="mr-4 w-16 h-16 rounded bg-white p-2 flex items-center justify-center">
-                    <img 
-                      src={currentTestimonial.logo} 
-                      alt={currentTestimonial.company} 
-                      className="max-w-full max-h-full object-contain"
-                    />
-                  </div>
-                )}
                 <div>
                   <p className="font-bold text-lg">{currentTestimonial.name}</p>
                   <p className="text-gray-300">{currentTestimonial.title}, {currentTestimonial.company}</p>

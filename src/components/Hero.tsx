@@ -44,8 +44,8 @@ const Hero = () => {
                 <Link to="/contact" className="btn bg-secondary-500 hover:bg-secondary-400 text-white font-medium transition-all shadow-premium-hover transform hover:-translate-y-1 text-center py-3 px-6">
                   Request Consultation
                 </Link>
-                <Link to="/about" className="btn border border-white/30 hover:bg-white/10 text-white font-medium transition-all text-center py-3 px-6">
-                  Learn More About Me
+                <Link to="/about" className="btn border border-white/30 hover:bg-white/10 text-white font-medium transition-all text-center py-3 px-6" aria-label="Read about Adv. Noor Khattak's background, experience and credentials">
+                  View My Background & Experience
                 </Link>
               </div>
               

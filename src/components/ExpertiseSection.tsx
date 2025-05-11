@@ -129,9 +129,10 @@ const ExpertiseSection = () => {
                 <Link 
                   to={`/expertise#${item.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`} 
                   className="inline-flex items-center text-primary hover:text-secondary-500 transition-colors"
+                  aria-label={`View details about ${item.title} services`}
                 >
-                  <span>Learn more</span>
-                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <span>Explore {item.title.split(' ')[0]} Services</span>
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                   </svg>
                 </Link>

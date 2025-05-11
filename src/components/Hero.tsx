@@ -7,8 +7,8 @@ const Hero = () => {
       <SEOHead 
         title="Top Karachi Advocate & Legal Counsel" 
         description="I am Advocate Noor Z. Khattak - Senior Legal Counsel in Karachi with 25+ years of distinguished experience in corporate law, banking regulations, and commercial litigation in the High Court of Sindh, Pakistan."
-        keywords="lawyer Karachi, advocate Sindh Pakistan, high court lawyer, corporate lawyer Pakistan, banking regulations counsel, commercial litigation Karachi, legal services Sindh"
-      />
+        keywords="lawyer Karachi, advocate Sindh Pakistan, wakeel in Karachi, high court lawyer, corporate lawyer Pakistan, banking regulations counsel, commercial litigation Karachi, legal services Sindh, best lawyer in Karachi, top wakeel in Karachi"
+        />
       
       <div className="relative pt-28 pb-16 md:pt-36 md:pb-28 bg-gradient-to-r from-primary-900 to-primary-800 text-white overflow-hidden">
         {/* Decorative design elements */}

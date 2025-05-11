@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
 type ExpertiseItem = {
   title: string;
@@ -7,6 +8,22 @@ type ExpertiseItem = {
 };
 
 const ExpertiseSection = () => {
+  const [animatedIndex, setAnimatedIndex] = useState<number | null>(null);
+  
+  // Auto-animate expertise items sequence
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setAnimatedIndex(prev => {
+        if (prev === null || prev >= expertiseItems.length - 1) {
+          return 0;
+        }
+        return prev + 1;
+      });
+    }, 3000);
+    
+    return () => clearInterval(interval);
+  }, []);
+
   const expertiseItems: ExpertiseItem[] = [
     {
       title: "Strategic Legal Risk Management",
@@ -14,6 +31,15 @@ const ExpertiseSection = () => {
       icon: (
         <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+        </svg>
+      ),
+    },
+    {
+      title: "Family Law & Personal Matters",
+      description: "I provide compassionate representation for divorce, custody, and inheritance matters with sensitivity and discretion.",
+      icon: (
+        <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
         </svg>
       ),
     },
@@ -64,11 +90,22 @@ const ExpertiseSection = () => {
     },
   ];
 
+  // Interactive statistics with counting animation
+  const stats = [
+    { value: 25, label: "Years Experience", symbol: "+" },
+    { value: 500, label: "Cases Handled", symbol: "+" },
+    { value: 90, label: "Success Rate", symbol: "%" },
+    { value: 100, label: "Corporate Clients", symbol: "+" }
+  ];
+
   return (
     <section className="section bg-white">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <h2 className="font-serif text-primary mb-4">My Legal Expertise</h2>
+          <div className="relative inline-block">
+            <h2 className="font-serif text-primary mb-4 relative z-10">My Legal Expertise</h2>
+            <div className="absolute -bottom-2 left-0 right-0 h-3 bg-secondary-300/30 -z-10 transform -rotate-1"></div>
+          </div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             I provide strategic legal counsel across a range of specialized practice areas to 
             protect your interests and advance your business objectives.
@@ -79,18 +116,59 @@ const ExpertiseSection = () => {
           {expertiseItems.map((item, index) => (
             <div 
               key={index}
-              className="bg-gray-50 p-8 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow flex flex-col items-center text-center"
+              className={`bg-gray-50 p-8 rounded-lg border border-gray-200 hover:shadow-lg transition-all duration-500 flex flex-col items-center text-center
+                ${animatedIndex === index ? 'transform -translate-y-2 shadow-xl' : ''}`}
+              onMouseEnter={() => setAnimatedIndex(index)}
             >
-              <div className="text-primary mb-4">{item.icon}</div>
+              <div className={`text-primary mb-4 transform transition-transform duration-500 ${animatedIndex === index ? 'scale-110' : ''}`}>
+                {item.icon}
+              </div>
               <h3 className="text-xl font-serif font-bold mb-3">{item.title}</h3>
               <p className="text-gray-600 mb-4">{item.description}</p>
+              <div className="mt-auto pt-4">
+                <Link 
+                  to={`/expertise#${item.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`} 
+                  className="inline-flex items-center text-primary hover:text-secondary-500 transition-colors"
+                >
+                  <span>Learn more</span>
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </Link>
+              </div>
             </div>
           ))}
         </div>
 
+        {/* Interactive Stats Counter */}
+        <div className="mt-20 py-12 px-6 bg-primary rounded-xl shadow-lg text-white">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center transform hover:scale-110 transition-transform duration-300">
+                <div className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2 flex items-center justify-center">
+                  <span>{stat.value}</span>
+                  <span className="text-secondary-400">{stat.symbol}</span>
+                </div>
+                <p className="text-sm text-gray-200">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
         <div className="text-center mt-12">
-          <Link to="/expertise" className="btn btn-primary">
-            Explore All My Services
+          <Link 
+            to="/expertise" 
+            className="btn btn-primary inline-flex items-center group"
+          >
+            <span>Explore All My Services</span>
+            <svg 
+              className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-200" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
           </Link>
         </div>
       </div>

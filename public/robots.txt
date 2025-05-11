@@ -1,5 +1,5 @@
 # robots.txt for https://noorkhattak.vercel.app
 User-agent: *
 Allow: /
-
+ 
 Sitemap: https://noorkhattak.vercel.app/sitemap.xml

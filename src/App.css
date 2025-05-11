@@ -37,11 +37,11 @@ body {
 }
 
 @keyframes slideUp {
-  from { 
+  from {
     transform: translateY(20px);
     opacity: 0;
   }
-  to { 
+  to {
     transform: translateY(0);
     opacity: 1;
   }
@@ -66,13 +66,13 @@ body {
   h2 {
     font-size: 1.5rem !important; /* 24px */
     line-height: 1.3 !important;
-  }
-  
+}
+
   .mobile-py-8 {
     padding-top: 2rem !important;
     padding-bottom: 2rem !important;
-  }
-  
+}
+
   .mobile-pt-16 {
     padding-top: 4rem !important;
   }

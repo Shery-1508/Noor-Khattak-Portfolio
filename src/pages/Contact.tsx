@@ -1,10 +1,42 @@
 import ContactSection from '../components/ContactSection';
 import SEO from '../components/SEO';
+import StructuredData from '../components/StructuredData';
 
 const Contact = () => {
+  // Create structured data for local business with contact info
+  const contactData = {
+    "@type": "LocalBusiness",
+    "name": "Adv. Noor Z. Khattak Legal Office",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "M/s. Ata-ur-Rehman & Co. Advocates, 206-207, Al-Ameera Centre, Shahrah-e-Iraq, Saddar",
+      "addressLocality": "Karachi",
+      "addressRegion": "Sindh",
+      "postalCode": "74400",
+      "addressCountry": "PK"
+    },
+    "telephone": "+92 XXX XXXXXXX",
+    "email": "contact@example.com",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "17:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "10:00",
+        "closes": "14:00"
+      }
+    ]
+  };
+
   return (
     <div className="bg-gray-50">
       <SEO pageKey="contact" />
+      <StructuredData type="localBusiness" customData={contactData} />
       <div className="container-custom py-20">
         {/* Page Header */}
         <div className="text-center mb-16">

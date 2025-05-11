@@ -1,4 +1,5 @@
 import SEO from '../components/SEO';
+import StructuredData from '../components/StructuredData';
 
 const Expertise = () => {
   const expertiseAreas = [
@@ -92,9 +93,25 @@ const Expertise = () => {
     }
   ];
 
+  // Create structured data for services
+  const servicesData = {
+    "@type": "ProfessionalService",
+    "name": "Adv. Noor Z. Khattak Legal Services",
+    "serviceType": "Legal Services",
+    "offers": expertiseAreas.map(area => ({
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": area.title,
+        "description": area.description
+      }
+    }))
+  };
+
   return (
     <div className="bg-gray-50">
       <SEO pageKey="expertise" />
+      <StructuredData type="professionalService" customData={servicesData} />
       <div className="container-custom py-20">
         {/* Page Header */}
         <div className="text-center mb-16">

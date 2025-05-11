@@ -1,9 +1,33 @@
 import SEO from '../components/SEO';
+import StructuredData from '../components/StructuredData';
 
 const About = () => {
+  const personData = {
+    "@type": "Person",
+    "name": "Adv. Noor Z. Khattak",
+    "jobTitle": "Senior Legal Counsel",
+    "description": "A distinguished legal professional with 25+ years of experience in corporate law, banking regulations, and commercial litigation",
+    "image": "https://noorkhattak.vercel.app/Noor_Khattak.jpeg",
+    "url": "https://noorkhattak.vercel.app/about",
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "University of Karachi"
+    },
+    "workLocation": {
+      "@type": "Place",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Karachi",
+        "addressRegion": "Sindh",
+        "addressCountry": "Pakistan"
+      }
+    }
+  };
+
   return (
     <div className="bg-gray-50">
       <SEO pageKey="about" />
+      <StructuredData type="attorney" customData={personData} />
       <div className="container-custom py-20">
         {/* Page Header */}
         <div className="text-center mb-16">

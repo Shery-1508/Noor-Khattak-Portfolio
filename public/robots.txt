@@ -1,3 +1,4 @@
+# robots.txt for https://noorkhattak.vercel.app
 User-agent: *
 Allow: /
 

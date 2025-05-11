@@ -23,7 +23,7 @@ const SEO = ({
   const description = customDescription || page.description;
   const keywords = customKeywords || page.keywords;
   const canonical = `${siteMetadata.site.url}${canonicalPath || '/' + (pageKey === 'home' ? '' : pageKey)}`;
-  const ogImage = `${siteMetadata.site.url}/Noor_Khattak.jpeg`;
+  const ogImage = siteMetadata.site.ogImage || `${siteMetadata.site.url}/og-image.jpg`;
 
   // Attorney structured data
   const attorneySchema = JSON.stringify(siteMetadata.structuredData.attorney);
@@ -35,6 +35,8 @@ const SEO = ({
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="author" content={siteMetadata.site.author} />
+      <meta name="robots" content="index, follow" />
+      <meta name="googlebot" content="index, follow" />
       
       {/* Canonical URL */}
       <link rel="canonical" href={canonical} />
@@ -45,18 +47,21 @@ const SEO = ({
       <meta property="og:type" content="website" />
       <meta property="og:url" content={canonical} />
       <meta property="og:image" content={ogImage} />
+      <meta property="og:image:alt" content={fullTitle} />
       <meta property="og:site_name" content={siteMetadata.site.title} />
+      <meta property="og:locale" content="en_US" />
       
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
+      <meta name="twitter:image:alt" content={fullTitle} />
       {siteMetadata.social.twitter && <meta name="twitter:site" content={siteMetadata.social.twitter} />}
       
       {/* Mobile Meta Tags */}
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-      <meta name="theme-color" content="#ffffff" />
+      <meta name="theme-color" content="#1a365d" />
       
       {/* Structured Data */}
       <script type="application/ld+json">{attorneySchema}</script>

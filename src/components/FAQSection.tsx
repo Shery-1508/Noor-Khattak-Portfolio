@@ -132,6 +132,7 @@ const FAQSection = () => {
                   ? 'bg-primary text-white' 
                   : 'bg-white text-gray-600'
               }`}
+              aria-label="Filter by category"
             >
               Browse by Category
             </button>
@@ -145,6 +146,7 @@ const FAQSection = () => {
                   ? 'bg-primary text-white' 
                   : 'bg-white text-gray-600'
               }`}
+              aria-label="Search questions"
             >
               Search Questions
             </button>
@@ -161,6 +163,7 @@ const FAQSection = () => {
                       ? 'bg-secondary-500 text-white'
                       : 'bg-white text-gray-700 hover:bg-gray-100'
                   }`}
+                  aria-label={`Filter by ${category} category`}
                 >
                   {category}
                 </button>
@@ -212,6 +215,8 @@ const FAQSection = () => {
                 <button
                   onClick={() => toggleFAQ(index)}
                   className="w-full flex justify-between items-center bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-opacity-50 text-left group"
+                  aria-expanded={openIndex === index ? "true" : "false"}
+                  aria-controls={`faq-content-${index}`}
                 >
                   <div className="flex items-start">
                     {item.category && (
@@ -245,6 +250,7 @@ const FAQSection = () => {
                   className={`overflow-hidden transition-all duration-300 ${
                     openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                   }`}
+                  id={`faq-content-${index}`}
                 >
                   <div className="p-5 bg-white border-t border-gray-100 rounded-b-lg">
                     <p className="text-gray-700">{item.answer}</p>
@@ -254,12 +260,12 @@ const FAQSection = () => {
                         Was this helpful?
                       </div>
                       <div className="flex space-x-2">
-                        <button className="p-1.5 rounded-full hover:bg-gray-100 text-gray-500 hover:text-green-500 transition-colors">
+                        <button className="p-1.5 rounded-full hover:bg-gray-100 text-gray-500 hover:text-green-500 transition-colors" aria-label="Mark as helpful">
                           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905a3.61 3.61 0 01-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
                           </svg>
                         </button>
-                        <button className="p-1.5 rounded-full hover:bg-gray-100 text-gray-500 hover:text-red-500 transition-colors">
+                        <button className="p-1.5 rounded-full hover:bg-gray-100 text-gray-500 hover:text-red-500 transition-colors" aria-label="Mark as not helpful">
                           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 14H5.236a2 2 0 01-1.789-2.894l3.5-7A2 2 0 018.736 3h4.018a2 2 0 01.485.06l3.76.94m-7 10v5a2 2 0 002 2h.096c.5 0 .905-.405.905-.904a3.61 3.61 0 01.608-2.006L17 13v-5m-7 10h2m5-10h2a2 2 0 012 2v6a2 2 0 01-2 2h-2.5" />
                           </svg>

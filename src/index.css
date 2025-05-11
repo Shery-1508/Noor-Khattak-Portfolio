@@ -38,6 +38,20 @@
   input, select, textarea {
     @apply text-base leading-loose;
   }
+
+  /* Improved contrast ratios for better accessibility */
+  .text-gray-500 {
+    @apply text-gray-700;
+  }
+  
+  .text-gray-600 {
+    @apply text-gray-800;
+  }
+  
+  /* Increase contrast for focus states */
+  :focus-visible {
+    @apply ring-2 ring-primary-800 ring-opacity-100 outline-none;
+  }
 }
 
 @layer components {
@@ -50,7 +64,7 @@
   }
   
   .btn-secondary {
-    @apply bg-secondary-500 text-white hover:bg-secondary-400 hover:shadow-md hover:-translate-y-0.5 transform;
+    @apply bg-secondary-600 text-white hover:bg-secondary-500 hover:shadow-md hover:-translate-y-0.5 transform;
   }
   
   .container-custom {
@@ -177,6 +191,15 @@
     height: 2px;
     background-color: currentColor;
     animation: expandUnderline 0.3s forwards;
+  }
+
+  /* High contrast helpers */
+  .high-contrast-text {
+    @apply text-gray-900;
+  }
+  
+  .high-contrast-bg {
+    @apply bg-white;
   }
 }
 

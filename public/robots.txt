@@ -1,5 +1,15 @@
 # robots.txt for https://noorkhattak.vercel.app
 User-agent: *
 Allow: /
- 
+
+# Important pages
+Allow: /about
+Allow: /expertise
+Allow: /experience
+Allow: /contact
+
+# Crawl delay for better server performance
+Crawl-delay: 5
+
+# Sitemap location
 Sitemap: https://noorkhattak.vercel.app/sitemap.xml

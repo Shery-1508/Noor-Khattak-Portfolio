@@ -118,13 +118,16 @@ const TestimonialsSection = () => {
               </svg>
             </button>
             
-            <div className="flex space-x-2">
+            <div className="flex space-x-2" role="tablist" aria-label="Testimonials Navigation">
               {testimonials.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setActiveIndex(index)}
                   className={`w-3 h-3 rounded-full ${index === activeIndex ? 'bg-white' : 'bg-white bg-opacity-30'}`}
                   aria-label={`Go to testimonial ${index + 1}`}
+                  aria-selected={index === activeIndex}
+                  role="tab"
+                  aria-controls={`testimonial-content-${index}`}
                 ></button>
               ))}
             </div>

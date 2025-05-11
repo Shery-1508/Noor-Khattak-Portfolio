@@ -185,6 +185,8 @@ const Expertise = () => {
                   ? 'bg-primary text-white shadow-md transform -translate-y-1' 
                   : 'bg-white text-gray-600 hover:bg-gray-100'
               }`}
+              aria-pressed={activeTab === index}
+              aria-label={`Show details about ${area.title}`}
             >
               {area.title}
             </button>

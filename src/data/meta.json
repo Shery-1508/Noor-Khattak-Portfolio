@@ -4,34 +4,34 @@
     "description": "I am Adv. Noor Z. Khattak, a trusted senior legal counsel in Karachi with expertise in corporate law, banking regulations, and commercial litigation.",
     "url": "https://noorkhattak.vercel.app",
     "author": "Adv. Noor Z. Khattak",
-    "keywords": "lawyer, advocate, Karachi, Sindh, Pakistan, corporate law, banking regulations, High Court, legal services, commercial litigation, legal counsel",
+    "keywords": "lawyer, advocate, wakeel, Karachi, Sindh, Pakistan, corporate law, banking regulations, High Court, legal services, commercial litigation, legal counsel, best lawyer in Karachi, top wakeel in Karachi, best advocate in Karachi",
     "ogImage": "https://noorkhattak.vercel.app/og-image.jpg"
   },
   "pages": {
     "home": {
       "title": "Home",
       "description": "I am Adv. Noor Z. Khattak, a trusted senior legal counsel in Karachi with expertise in corporate law, banking regulations, and commercial litigation.",
-      "keywords": "lawyer, advocate, Karachi, Sindh, Pakistan, corporate law, banking regulations, High Court, legal services"
+      "keywords": "lawyer, advocate, wakeel, Karachi, Sindh, Pakistan, corporate law, banking regulations, High Court, legal services, Karachi best lawyer, top wakeel in Karachi, best legal services in Karachi"
     },
     "about": {
       "title": "About Me",
       "description": "Learn about my background, qualifications, and values as a senior legal counsel dedicated to providing exceptional legal services in Karachi.",
-      "keywords": "lawyer biography, legal experience, Karachi advocate, legal qualifications, legal philosophy"
+      "keywords": "lawyer biography, legal experience, Karachi advocate, legal qualifications, legal philosophy, wakeel in Karachi, best lawyer in Sindh, experienced wakeel"
     },
     "expertise": {
       "title": "My Legal Expertise",
       "description": "Discover my areas of legal expertise including corporate law, banking regulations, commercial litigation, and more.",
-      "keywords": "corporate law, banking regulations, commercial litigation, legal expertise, Pakistan law specialization"
+      "keywords": "corporate law, banking regulations, commercial litigation, legal expertise, Pakistan law specialization, top corporate lawyer in Karachi, best wakeel for corporate cases, experienced banking law advocate"
     },
     "experience": {
       "title": "My Professional Experience",
       "description": "Explore my extensive legal experience, major cases, and successful outcomes for clients throughout my career.",
-      "keywords": "legal career, case history, lawyer experience, Karachi legal practice, court experience"
+      "keywords": "legal career, case history, lawyer experience, Karachi legal practice, court experience, experienced wakeel in Karachi, best lawyer for High Court cases, successful advocate in Sindh"
     },
     "contact": {
       "title": "Contact Me",
       "description": "Get in touch with me for legal consultation and services. I'm available to discuss your legal needs and provide expert counsel.",
-      "keywords": "legal consultation, lawyer contact, Karachi legal services, attorney appointment, legal advice"
+      "keywords": "legal consultation, lawyer contact, Karachi legal services, attorney appointment, legal advice, hire best wakeel in Karachi, top advocate consultation, contact Karachi lawyer"
     },
     "notFound": {
       "title": "Page Not Found",
@@ -52,6 +52,7 @@
       "description": "Senior Legal Counsel specializing in corporate law, banking regulations, and commercial litigation in Karachi, Pakistan.",
       "url": "https://noorkhattak.vercel.app",
       "image": "https://noorkhattak.vercel.app/Noor_Khattak.jpeg",
+      "alternateName": ["Wakeel in Karachi", "Top Advocate in Sindh", "Best Lawyer in Karachi"],
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Karachi",

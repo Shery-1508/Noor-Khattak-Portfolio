@@ -31,7 +31,7 @@ const Hero = () => {
               </h1>
               
               <h2 className="text-xl md:text-2xl font-serif text-gray-200 mb-4 md:mb-6 font-light">
-                Senior Advocate with 25+ Years of Experience
+                Senior Advocate & Trusted Wakeel with 25+ Years of Experience
               </h2>
               
               <p className="text-gray-300 mb-6 md:mb-8 text-base md:text-lg leading-relaxed max-w-xl">
@@ -67,7 +67,7 @@ const Hero = () => {
                 <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden shadow-premium border-4 border-white/20">
                   <img 
                     src="/Noor_Khattak.jpeg" 
-                    alt="Advocate Noor Z. Khattak" 
+                    alt="Advocate Noor Z. Khattak - Best Lawyer in Karachi" 
                     className="w-full h-full object-cover"
                   />
                 </div>

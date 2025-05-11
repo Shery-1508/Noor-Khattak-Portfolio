@@ -14,13 +14,13 @@ const Footer = () => {
               </svg>
               <h3 className="text-xl font-serif">Adv. Noor Z. Khattak</h3>
             </div>
-            <p className="mb-2">Senior Legal Counsel</p>
-            <p className="mb-2">Karachi High Court</p>
-            <p className="mb-2">Pakistan Bar Council</p>
+            <p className="mb-2">Top Lawyer & Wakeel in Karachi</p>
+            <p className="mb-2">Senior Legal Counsel - High Court of Sindh</p>
+            <p className="mb-2">Member, Pakistan Bar Council</p>
           </div>
           
           <div className="text-center sm:text-left">
-            <h3 className="text-xl font-serif mb-4">Contact Information</h3>
+            <h3 className="text-xl font-serif mb-4">Contact Karachi's Best Lawyer</h3>
             <p className="mb-2">
               <a href="mailto:noorzameen.advocate@gmail.com" className="hover:text-accent transition-colors flex items-center justify-center sm:justify-start">
                 <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
@@ -43,7 +43,7 @@ const Footer = () => {
                 <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"></path>
                 </svg>
-                Office Address:
+                Karachi Law Office:
               </span>
               M/s. Ata-ur-Rehman & Co. Advocates<br />
               206-207, Al-Ameera Centre,<br />
@@ -53,7 +53,7 @@ const Footer = () => {
           </div>
           
           <div className="text-center sm:text-left">
-            <h3 className="text-xl font-serif mb-4">Quick Links</h3>
+            <h3 className="text-xl font-serif mb-4">Legal Services</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/" className="hover:text-accent transition-colors inline-flex items-center">
@@ -68,7 +68,7 @@ const Footer = () => {
                   <svg className="w-3 h-3 mr-2" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
                   </svg>
-                  About
+                  About Your Karachi Lawyer
                 </Link>
               </li>
               <li>
@@ -76,7 +76,7 @@ const Footer = () => {
                   <svg className="w-3 h-3 mr-2" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
                   </svg>
-                  Expertise
+                  Legal Expertise
                 </Link>
               </li>
               <li>
@@ -84,7 +84,7 @@ const Footer = () => {
                   <svg className="w-3 h-3 mr-2" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
                   </svg>
-                  Experience
+                  Legal Experience
                 </Link>
               </li>
               <li>
@@ -92,7 +92,7 @@ const Footer = () => {
                   <svg className="w-3 h-3 mr-2" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
                   </svg>
-                  Contact
+                  Contact Your Wakeel
                 </Link>
               </li>
             </ul>
@@ -100,7 +100,8 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
-          <p>&copy; {currentYear} Adv. Noor Z. Khattak. All rights reserved.</p>
+          <p>&copy; {currentYear} Adv. Noor Z. Khattak - Best Lawyer and Wakeel in Karachi. All rights reserved.</p>
+          <p className="mt-2 text-sm text-gray-400">Providing expert legal services in corporate law, banking regulations, and commercial litigation across Karachi and Pakistan.</p>
         </div>
       </div>
     </footer>

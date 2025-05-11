@@ -1,0 +1,65 @@
+{
+  "site": {
+    "title": "Adv. Noor Z. Khattak | Senior Legal Counsel in Karachi",
+    "description": "I am Adv. Noor Z. Khattak, a trusted senior legal counsel in Karachi with expertise in corporate law, banking regulations, and commercial litigation.",
+    "url": "https://noorkhattak.vercel.app",
+    "author": "Adv. Noor Z. Khattak",
+    "keywords": "lawyer, advocate, Karachi, Sindh, Pakistan, corporate law, banking regulations, High Court, legal services, commercial litigation, legal counsel",
+    "ogImage": "https://noorkhattak.vercel.app/og-image.jpg"
+  },
+  "pages": {
+    "home": {
+      "title": "Home",
+      "description": "I am Adv. Noor Z. Khattak, a trusted senior legal counsel in Karachi with expertise in corporate law, banking regulations, and commercial litigation.",
+      "keywords": "lawyer, advocate, Karachi, Sindh, Pakistan, corporate law, banking regulations, High Court, legal services"
+    },
+    "about": {
+      "title": "About Me",
+      "description": "Learn about my background, qualifications, and values as a senior legal counsel dedicated to providing exceptional legal services in Karachi.",
+      "keywords": "lawyer biography, legal experience, Karachi advocate, legal qualifications, legal philosophy"
+    },
+    "expertise": {
+      "title": "My Legal Expertise",
+      "description": "Discover my areas of legal expertise including corporate law, banking regulations, commercial litigation, and more.",
+      "keywords": "corporate law, banking regulations, commercial litigation, legal expertise, Pakistan law specialization"
+    },
+    "experience": {
+      "title": "My Professional Experience",
+      "description": "Explore my extensive legal experience, major cases, and successful outcomes for clients throughout my career.",
+      "keywords": "legal career, case history, lawyer experience, Karachi legal practice, court experience"
+    },
+    "contact": {
+      "title": "Contact Me",
+      "description": "Get in touch with me for legal consultation and services. I'm available to discuss your legal needs and provide expert counsel.",
+      "keywords": "legal consultation, lawyer contact, Karachi legal services, attorney appointment, legal advice"
+    },
+    "notFound": {
+      "title": "Page Not Found",
+      "description": "The page you're looking for cannot be found. Please navigate back to the homepage.",
+      "keywords": "page not found, 404, error page"
+    }
+  },
+  "social": {
+    "twitter": "@noorkhattak",
+    "facebook": "noorkhattak",
+    "linkedin": "in/noorkhattak"
+  },
+  "structuredData": {
+    "attorney": {
+      "@context": "https://schema.org",
+      "@type": "Attorney",
+      "name": "Adv. Noor Z. Khattak",
+      "description": "Senior Legal Counsel specializing in corporate law, banking regulations, and commercial litigation in Karachi, Pakistan.",
+      "url": "https://noorkhattak.vercel.app",
+      "image": "https://noorkhattak.vercel.app/Noor_Khattak.jpeg",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Karachi",
+        "addressRegion": "Sindh",
+        "addressCountry": "Pakistan"
+      },
+      "telephone": "+92 XXX XXXXXXX",
+      "email": "contact@example.com"
+    }
+  }
+} 

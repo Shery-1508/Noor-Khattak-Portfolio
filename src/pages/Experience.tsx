@@ -1,3 +1,5 @@
+import SEO from '../components/SEO';
+
 const Experience = () => {
   const experiences = [
     {
@@ -54,6 +56,7 @@ const Experience = () => {
 
   return (
     <div className="bg-gray-50">
+      <SEO pageKey="experience" />
       <div className="container-custom py-20">
         {/* Page Header */}
         <div className="text-center mb-16">

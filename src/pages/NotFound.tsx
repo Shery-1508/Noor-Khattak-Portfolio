@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 const NotFound = () => {
   return (
-    <div className="bg-gray-50 min-h-[70vh] flex items-center">
+    <div className="min-h-screen flex items-center justify-center bg-gray-50 py-20">
+      <SEO pageKey="notFound" />
       <div className="container-custom py-20 text-center">
         <h1 className="font-serif text-primary text-6xl mb-4">404</h1>
         <h2 className="text-3xl font-bold mb-6">Page Not Found</h2>

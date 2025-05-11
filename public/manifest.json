@@ -1,0 +1,16 @@
+{
+  "name": "Adv. Noor Z. Khattak | Senior Legal Counsel",
+  "short_name": "Noor Khattak",
+  "description": "Senior Legal Counsel in Karachi with expertise in corporate law, banking regulations, and commercial litigation",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1a365d",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+} 

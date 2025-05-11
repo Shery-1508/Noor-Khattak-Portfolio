@@ -1,6 +1,9 @@
+import SEO from '../components/SEO';
+
 const About = () => {
   return (
     <div className="bg-gray-50">
+      <SEO pageKey="about" />
       <div className="container-custom py-20">
         {/* Page Header */}
         <div className="text-center mb-16">

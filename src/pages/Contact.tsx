@@ -1,8 +1,10 @@
 import ContactSection from '../components/ContactSection';
+import SEO from '../components/SEO';
 
 const Contact = () => {
   return (
     <div className="bg-gray-50">
+      <SEO pageKey="contact" />
       <div className="container-custom py-20">
         {/* Page Header */}
         <div className="text-center mb-16">

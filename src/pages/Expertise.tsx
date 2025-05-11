@@ -1,3 +1,5 @@
+import SEO from '../components/SEO';
+
 const Expertise = () => {
   const expertiseAreas = [
     {
@@ -92,6 +94,7 @@ const Expertise = () => {
 
   return (
     <div className="bg-gray-50">
+      <SEO pageKey="expertise" />
       <div className="container-custom py-20">
         {/* Page Header */}
         <div className="text-center mb-16">
